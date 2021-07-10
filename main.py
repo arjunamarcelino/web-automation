@@ -20,23 +20,24 @@ driver.find_element_by_xpath(
     "//*[@id='productWidget']/div[2]/div[1]/div[2]/div[1]/div/label").click()
 
 # choose product
-driver.find_element(By.ID, "productSearchFrom").send_keys("KNO")  # origin
-driver.find_element_by_xpath("//*[@id='fromDropDownList-airport1']").click()
-# driver.find_element_by_xpath("//*[@id='fromDropDownList-airport1']").click()
+driver.find_element(By.ID, "productSearchFrom").send_keys(
+    "KNO")  # origin
+
 time.sleep(2)
 
-# driver.find_element(By.ID, "productSearchTo").send_keys("CGK")  # dest
+driver.find_element(By.ID, "productSearchTo").send_keys("CGK")  # dest
 
-# driver.find_element_by_id("productSearchDeparture").clear()
-# driver.find_element_by_id(
-#     "productSearchDeparture").send_keys("Sen, 26 Jul 2021")
+driver.find_element_by_id("productSearchDeparture").clear()
+driver.find_element_by_id(
+    "productSearchDeparture").send_keys("Sen, 26 Jul 2021")
 
-# driver.find_element_by_id("productSearchReturn").clear()
-# driver.find_element_by_id("productSearchReturn").send_keys("Rab, 28 Jul 2021")
+driver.find_element_by_id("productSearchReturn").clear()
+driver.find_element_by_id("productSearchReturn").send_keys("Rab, 28 Jul 2021")
 
 
 # submit product
-# driver.find_element_by_xpath("//*[@id='productWidget']/div[2]/div[3]/button").click()
+driver.find_element_by_xpath(
+    "//*[@id='productWidget']/div[2]/div[3]/button").click()
 
 
 time.sleep(10)
