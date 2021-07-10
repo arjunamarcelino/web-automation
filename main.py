@@ -15,12 +15,13 @@ driver.maximize_window()
 
 driver.get("https://www.tiket.com/")
 
+# choose the trip
+driver.find_element_by_xpath(
+    "//*[@id='productWidget']/div[2]/div[1]/div[2]/div[1]/div/label").click()
+
 # choose product
 driver.find_element(By.ID, "productSearchFrom").send_keys("KNO")  # origin
-wait = WebDriverWait(driver, 10)
-element = wait.until(EC.element_to_be_clickable(
-    (By.XPATH, "//*[@id='fromDropDownList-airport1']")))
-element.click()
+driver.find_element_by_xpath("//*[@id='fromDropDownList-airport1']").click()
 # driver.find_element_by_xpath("//*[@id='fromDropDownList-airport1']").click()
 time.sleep(2)
 
